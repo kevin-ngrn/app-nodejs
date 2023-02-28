@@ -1,25 +1,23 @@
-class TicketManager{
-    getEventos(){
-        []
-    }
-    agregarEvento(){
-        nombre="",
-        lugar="",
-        precio="",
-        capacidad=50,
-        fecha=""
-        participantes=[
-            {
-
-            }
-        ]     
-    }
-    agregarUsario(){
-        participantes.push
+class ProductManager{
+    
+    addProduct(){
+        title = '';
+        description = '';
+        price = '';
+        thumbnail = '';
+        code = '';
+        stock = '';
     }
 
 
-    #precioBaseDeGanancia = precio + 0.15
+    constructor(title,description,price,thumbnail,code,stock){  
+        this.title = title
+        this.description = description
+        this.price = price
+        this.thumbnail = thumbnail
+        this.code = code
+        this.stock = stock
+    }
 
 }
 
