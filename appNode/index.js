@@ -1,6 +1,6 @@
-const ProductManager = require("./Class")
+const TicketManager = require("./Class")
 
 
-const getProducts = new ProductManager()
+const nuevoEvento = new TicketManager()
 
-getProducts.addProduct
+nuevoEvento()

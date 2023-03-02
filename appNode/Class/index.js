@@ -1,26 +1,34 @@
-class ProductManager{
-    
-    addProduct(){
-        title = '';
-        description = '';
-        price = '';
-        thumbnail = '';
-        code = '';
-        stock = '';
+class TicketManager{
+    eventos = []
+
+    agregarEventos(){
+        nombre = ''
+        lugar = ''
+        precio = ''
+        capacidad = 50
+        fecha = ''
+        participantes = []
+        id = 1}
+
+    getEventos(){
+        ["El evento SEO para SEOs de LATAM", 
+        "Club Severino - The Monday Party", 
+        "Fiesta HYPE",
+        "Feria Gamer! / Evento Retrogamer # 1"]
     }
 
+    #precioBaseDeGanancia = this.precio * 1.15
 
-    constructor(title,description,price,thumbnail,code,stock){  
-        this.title = title
-        this.description = description
-        this.price = price
-        this.thumbnail = thumbnail
-        this.code = code
-        this.stock = stock
+    agregarUsuario(){
+        idEvento = this.agregarEventos.id
+        idUsuario = ''
     }
-
+    ponerEventoEnGira(){
+        idNuevoEvento = ''
+        nuevaLocalidad = ''
+        nuevaFecha = ''
+    }
 }
-
 
 
 
