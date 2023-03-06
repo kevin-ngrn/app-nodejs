@@ -1,52 +1,46 @@
 class TicketManager{
-    eventos = []
+    eventos
+    
+    constructor(){
+        this.eventos = []
+    }
 
-    agregarEventos(){
-        nombre = ''
-        lugar = ''
-        precio = ''
-        capacidad = 50
-        fecha = ''
-        participantes = []
-        id = 1}
+    agregarEventos(nombre, lugar, precio, capacidad = 50, fecha, participantes = []){
+        const infoEvento = {
+            nombre: nombre,
+            lugar: lugar,
+            precio: precio * 1.15,
+            capacidad: capacidad,
+            fecha: fecha,
+            participantes: participantes,
+            id: 1            
+        }
+        this.eventos.push(infoEvento)
+    }
 
     getEventos(){
-        ["El evento SEO para SEOs de LATAM", 
-        "Club Severino - The Monday Party", 
-        "Fiesta HYPE",
-        "Feria Gamer! / Evento Retrogamer # 1"]
+        return this.eventos 
     }
 
     #precioBaseDeGanancia = this.precio * 1.15
 
     agregarUsuario(){
-        idEvento = this.agregarEventos.id
+        if (this.eventos) {
+            idEvento = this.eventos.id
+        }else{
+            console.log('error')
+        }
         idUsuario = ''
     }
     ponerEventoEnGira(){
-        idNuevoEvento = ''
-        nuevaLocalidad = ''
-        nuevaFecha = ''
+        idNuevoEvento = this.eventos.id
+        nuevaLocalidiad = this.eventos.lugar
+        nuevaFecha = this.eventos.fecha
     }
 }
 
+module.exports = TicketManager
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-module.exports = ProductManager 
