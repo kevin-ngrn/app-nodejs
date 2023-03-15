@@ -1,46 +1,34 @@
-class TicketManager{
-    eventos
-    
+class ProductManager{
+
     constructor(){
-        this.eventos = []
+        this.products = []
     }
 
-    agregarEventos(nombre, lugar, precio, capacidad = 50, fecha, participantes = []){
-        const infoEvento = {
-            nombre: nombre,
-            lugar: lugar,
-            precio: precio * 1.15,
-            capacidad: capacidad,
-            fecha: fecha,
-            participantes: participantes,
-            id: 1            
+    addProducts( title, description, price, thumbnail, code, stock){
+        const infoProduct = {
+            title,
+            description,
+            price,
+            thumbnail,
+            code,
+            stock,
+            id: 1
         }
-        this.eventos.push(infoEvento)
+        this.products.push(infoProduct)
+        infoProduct.id++;
     }
 
-    getEventos(){
-        return this.eventos 
+    getProducts(){
+        return this.products
     }
 
-    #precioBaseDeGanancia = this.precio * 1.15
-
-    agregarUsuario(){
-        if (this.eventos) {
-            idEvento = this.eventos.id
-        }else{
-            console.log('error')
-        }
-        idUsuario = ''
-    }
-    ponerEventoEnGira(){
-        idNuevoEvento = this.eventos.id
-        nuevaLocalidiad = this.eventos.lugar
-        nuevaFecha = this.eventos.fecha
+    getProductById(id){
+        this.products.indexOf(id)
     }
 }
 
-module.exports = TicketManager
 
+module.exports = ProductManager
 
 
 

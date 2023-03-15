@@ -1,10 +1,18 @@
-const TicketManager = require("./Class")
+
+const ProductManager = require("./Class")
 
 
-const nuevoEvento = new TicketManager('hola')
 
 
-nuevoEvento.agregarEventos('Recital - Shakira', 'Colombia', 5000, 50000, '12/12/2023' )
+const nuevoProducto = new ProductManager
 
-const eventos = nuevoEvento.getEventos()
-console.log(eventos);
+
+nuevoProducto.addProducts('Tijera', 'Tijera Escolar Mapped', 200, 'ruta/img', 10, 100)
+const productos = nuevoProducto.getProducts()
+
+
+nuevoProducto.addProducts('Cascola', 'Cascola Escolar Mapped', 250, 'ruta/img', 10, 100)
+
+const prodById = nuevoProducto.getProductById(1)
+
+console.log(prodById)
